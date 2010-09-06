@@ -1,0 +1,8 @@
+<%= div_for role do %>
+    <p>
+    <%= link_to "delete", role, :confirm => 'Are you sure?', :method => :delete, :remote => true %>
+    -
+    <%= role.name %>
+    </p>
+<% end %>
+

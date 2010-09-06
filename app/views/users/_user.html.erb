@@ -1,0 +1,7 @@
+<%= div_for user do %>
+    <p>
+    <%= link_to 'editar',edit_user_path(user) %> -
+    <%= user.name %> - <%= user.email %> - <%= user.roles.collect {|r| r.name } %>
+    </p>
+<% end %>
+

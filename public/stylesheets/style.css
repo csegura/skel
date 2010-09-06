@@ -1,0 +1,398 @@
+/*
+Theme Name: GTD
+Version: 1
+Author: Templatic
+Author URI: http://templatic.com/
+Description: Originally developed by Wordpress.org, P2 Theme - A group blog theme for short update messages, inspired by Twitter. Featuring: Hassle-free posting from the front page. Perfect for group blogging, or as a liveblog theme. Dynamic page updates. Threaded comment display on the front page. In-line editing for posts and comments. Live tag suggestion based on previously used tags. A show/hide feature for comments, to keep things tidy. Real-time notifications when a new comment or update is posted. Super-handy keyboard shortcuts. Helvetica Neue for you modern font lovers. And more to come...
+*/
+
+/* The Reset ---------------------------------- */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,
+h6,pre,form,fieldset,input,p,blockquote,table,
+th,td { margin: 0; padding: 0; }
+fieldset,img,abbr { border: 0; }
+address,caption,cite,code,dfn,em,h1,h2,h3,
+h4,h5,h6,strong,th,var { font-style: normal; font-weight: normal; }
+caption,th { text-align: left; }
+q:before,q:after { content: ''; }
+a { text-decoration: none; }
+
+/* Font Stacks -------------------------------- */
+body, form *, #respond #cancel-comment-reply-link {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+h1, h2, h3, #postbox label, #help dd {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 200;
+}
+code, pre { font-family: Monaco, Consolas, "Courier New", monospace; }
+/* -------------------------------------------- */
+
+html {
+	font-size: 100%;
+}
+body {
+	font-size: 62.5%;
+	background: #e5e5e5;
+}
+a, a:visited, a:active, #page_main .selected .actions a, #page_main .selected .actions a:link, #page_main .selected .actions a:visited, #help dt {
+	color: #3478e3;
+}
+a:hover, #page_main .selected .actions a:hover, #page_main .selected .actions a:active {
+	color: #d54e21;
+}
+#header h1 a{
+color: #000;
+}
+a:hover {
+	border-bottom: 1px dotted #333;
+}
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
+code, pre {
+	font-size: 1.1em;
+}
+code {
+	background: #f1f1f1;
+}
+acronym {
+	border-bottom: 1px dotted rgb(85, 85, 85);
+	cursor: help;
+}
+dt {
+	font-weight: bold;
+}
+dd {
+	margin-left: 2em;
+}
+blockquote {
+	padding-left: 8px;
+	font-style: italic;
+	color: #888;
+	background: #f1f1f1;
+	padding: 2px 12px;
+}
+
+#header .sleeve {
+	width: 980px;
+	margin: 0 auto;
+	text-align:left;
+	display: inline-block;
+}
+h1 {
+	font-size: 3em;
+	line-height: 1em;
+	display: inline-block;
+	padding: 8px 0;
+}
+#header small {
+	font-size: 1.3em;
+	line-height: 1.2em;
+	display: block;
+	clear: both;
+	margin-top: -3px;
+	padding: 0 16px 12px 0;
+	color: #4c5d7e;
+}
+
+.sleeve_main{
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+	margin:1px 1px 20px 1px;
+	border:1px 0 0 1px solid #000;
+}
+h4, h5, h6 {
+	font-weight: 500;
+}
+
+#header{
+background: #cce5eb url(/images/headerbg.png) repeat-x bottom;
+text-align:center;
+xheight:102px;
+}
+
+#wrapper {
+	/* this is #sidebar bg */
+	width: 980px;
+	margin: 0 auto;
+	position: relative;
+	margin-top: 20px;
+	overflow: hidden;
+}
+.sleeve_main {
+	width: auto;
+}
+
+#page_main {
+	font-size: 1.3em;
+	padding: 25px;
+	overflow: hidden;
+}
+.single #page_main {
+	padding-top: 18px;
+}
+#page_main .wp-smiley {
+	border: none;
+}
+
+#page_maintitle {
+	background:#eef7fc;
+	border-bottom:1px solid #d1e2eb;
+	position: relative;
+	padding: 20px;
+	margin-right:1px;
+	font-size: 14px;
+	height:100%; overflow:hidden;
+}
+
+
+#page_blue {
+	background:#eef7fc;
+	border-bottom:1px solid #d1e2eb;
+	padding: 10px 20px 10px 20px;
+	margin-right: 261px;
+	font-size: 14px;
+	height: 100%;
+	overflow:hidden;
+}
+
+#page_blue h2 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+#page div#page_title {
+
+}
+
+#page_title {
+    background:#eef7fc;
+	border-bottom:1px solid #d1e2eb;
+	padding: 10px 20px 10px 20px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#page_title span {
+    float: right;
+}
+
+
+#page #respond {
+	width: 70%;
+	margin-bottom: 20px;
+	margin-left: 72px;
+}
+
+
+
+#page_main h2 {
+	padding-top: 10px;
+}
+
+h2 {
+	font-size: 2em;
+	font-weight: normal;
+	color: #555;
+	position: relative;
+}
+
+h3 {
+	font-size: 1.2em;
+	color: #777;
+	font-weight: bold;
+}
+
+#page_main p img {
+	vertical-align: top;
+	padding: 2px;
+	border: 1px solid #eee;
+	margin-right: 8px;
+}
+#page_main h4 {
+	font-size: 1em;
+	line-height: 1.1em;
+}
+#page_main p {
+	margin: .7em 0;
+}
+#page_main p, #page_main ul, #page_main ol {
+	font-size: 1em;
+	line-height: 1.4em;
+	color: #333;
+}
+
+.sleeve_main {
+	margin-right: 261px;
+	width: auto;
+	background: white;
+}
+
+
+#sidebar {
+	color: #555;
+	margin-left: -1px;
+	float: right;
+	width: 217px;
+	position: relative;
+	top: 0;
+	padding: 6px 18px 18px 18px;
+}
+
+#sidebar h2 {
+	font-weight: bold;
+	margin: 6px 0 6px 0;
+	padding: 3px;
+	font-size: 13px;
+	background-color: #53648C;
+	color: #ffffff;
+}
+
+#sidebar ul li p {
+	line-height: 1.4em;
+	margin-bottom: 1.0em;
+}
+
+#sidebar a:hover {
+	border-bottom: none;
+}
+#sidebar ul {
+	list-style: none;
+	margin-bottom: 22px;
+	color: #888;
+	font-size: 1.1em;
+}
+#sidebar ul ul {
+margin-bottom: 0px;
+}
+#sidebar ul li {
+	clear: both;
+	padding: 4px 0 5px;
+	font-size: 13px;
+	font-weight: bold;
+}
+#sidebar ul li ul li {
+	padding-bottom: 4px;
+	padding-right: 6px;
+}
+#sidebar ul li ul li ul {
+	margin-left: 10px;
+	font-size: 1em;
+}
+
+#sidebar ul li#authors ul li {
+	margin-bottom: 0;
+	padding-left: 0;
+	padding-right: 10px;
+	float: left;
+	height: 32px;
+	width: 32px;
+	clear: none!important;
+}
+#sidebar ul li#authors h2 {
+	padding-left: 0;
+}
+#sidebar ul li#authors ul li strong {
+	display: none;
+}
+#sidebar ul li#authors ul li img.avatar {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+#sidebar ul li#authors, #sidebar ul li#authors ul li {
+	border: none;
+	margin-bottom: -3px;
+	margin-right: -5px;
+}
+
+#page_main ul#postlist, #page_main .post ul {
+	list-style: none;
+	margin-top: 0px;
+}
+#page_main ul#postlist ul, #page_main .post ul {
+	list-style: disc;
+}
+#page_main ul#postlist ul ul, #page_main ul#postlist ol ul, #page_main .post ul ul, #page_main .post ol ul {
+	margin-top: 0;
+}
+#page_main ol, #page_main .post ol {
+	margin-top: 16px;
+	margin-left: 18px;
+	list-style: decimal;
+}
+#page_main ol ol, #page_main .post ol ol {
+	margin-top: 0;
+}
+
+#page form {
+    margin-left: 30px;
+}
+
+/* new add ---------*/
+
+
+.nav { margin:0; padding:0; list-style:none; clear:both; }
+.nav li { margin:0 5px 0 0; float:left;  }
+.nav li a { display:block; padding:7px 10px;  float:left; font:bold 13px Arial, Helvetica, sans-serif; color:#fff; border:1px solid #53648c; border-bottom:none;  background:#53648c; border-bottom:none; }
+.nav li a:hover,  .nav li.current_page_item a { color:#000; background:#e5e5e5; border:1px solid #c0c0c0; border-bottom:none; }
+
+#header .sleeve  { position:relative; }
+#header p.login { font:12px Arial, Helvetica, sans-serif; color:#4f6889; position:absolute; top:8px; right:0px; color:#5f79a1  }
+#header p.login a { margin: 0 3px; color:#5f79a1 }
+
+/* === === */
+#page_error {
+    background-color: #FFE8E8;
+    border: 1px solid #900;
+    width: 80%;
+    margin: 0 auto 10px auto;
+    padding: 5px;
+}
+
+#page_error p {
+    font-size: 95%;
+    font-weight: bold;
+    color: #DF0000;
+}
+
+#page_notice {
+    background-color: #E8FFE8;
+    border: 1px solid #090;
+    width: 80%;
+    margin: 0 auto 10px auto;
+    padding: 5px;
+}
+
+#page_error p {
+    font-size: 95%;
+    font-weight: bold;
+    color: #DF0000;
+}
+
+
+
+#footer {
+	width: 980px;
+	clear: both;
+	margin: 0 auto;
+	padding-bottom:30px;
+}
+#footer p {
+	font-size: 1.3em;
+	color: #777;
+}
+#footer a {
+	color: #555;
+}
+#footer a:hover {
+	color: #000;
+	border-bottom:1px solid #aaa;
+}
+

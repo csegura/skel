@@ -1,0 +1,28 @@
+<%= render :partial => 'sidebar' %>
+
+<div id="page" class="sleeve_main">
+
+   <div id='page_title'>
+   Gestión de Usuarios
+   <span id='page_count'><%= @users.count %></span>
+   </div>
+
+   <% if flash[:notice] %>
+     <br/>
+     <div id='page_notice'><%= flash[:notice] %></div>
+   <% end %>
+
+   <div id='page_main'>
+
+    <h3>Usuarios</h3>
+    <div id="users">
+      <% if @users.empty? %>
+        <p>sin usuarios</p>
+      <% end %>
+
+      <%= render :partial => 'user', :collection => @users %>
+    </div>
+
+  </div>
+</div>
+

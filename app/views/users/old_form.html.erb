@@ -1,0 +1,20 @@
+<%= form_for(@category, :remote => true) do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>
+
+
+   <!-- form
+   <div class='page_form'>
+     <% form_for Category.new, :remote => true do |f| %>
+      <%= f.label :name, "Category" %><br />
+      <%= f.text_field :name %><br />
+      <%= f.submit "Add" %>
+     <% end %>
+   </div>
+   -->
+

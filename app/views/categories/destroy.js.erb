@@ -1,0 +1,6 @@
+$('#page_notice').hide();
+/* Eliminate the comment by fading it out */
+$('#category_<%= @category.id %>').fadeOut();
+/* Replace the count of comments */
+$('#page_count').html("<%= Category.count %>");
+

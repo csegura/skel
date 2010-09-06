@@ -1,0 +1,25 @@
+<%= render :partial => 'sidebar' %>
+
+<div id="page" class="sleeve_main">
+
+   <div id='page_title'>
+   Roles
+   <span id='page_count'><%= @roles.count %></span>
+   </div>
+
+   <%= render :partial => 'form' %>
+
+   <div id='page_main'>
+
+    <h3>Name</h3>
+    <div id="roles">
+      <% if @roles.empty? %>
+        <p>no roles</p>
+      <% end %>
+
+      <%= render :partial => @roles, :locals => { :list => true } %>
+    </div>
+
+  </div>
+</div>
+

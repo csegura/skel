@@ -1,0 +1,13 @@
+<%= render :partial => 'sidebar' %>
+
+<div id="page" class="sleeve_main">
+
+   <div id='page_title'>
+   Editar Usuario (<%= @user.name %>)
+   <span id='page_count'><%= @user.email %></span>
+   </div>
+
+   <%= render :partial => 'form' %>
+
+</div>
+

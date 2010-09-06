@@ -1,0 +1,35 @@
+
+<div id="page" class="sleeve_main">
+
+  <div id='page_title'>
+  Identificación
+  </div>
+
+  <br/>
+
+  <%= semantic_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |form| %>
+
+    <%= form.inputs do %>
+      <%= form.input :email %>
+      <%= form.input :password %>
+
+      <!--
+      <% if devise_mapping.rememberable? -%>
+        <%= form.check_box :remember_me, :label => 'recordarme' %>
+      <% end -%>
+      -->
+    <% end %>
+
+    <% form.buttons do %>
+      <%= form.commit_button :label => 'entrar' %>
+    <% end %>
+
+  <% end %>
+
+  <br/>
+
+  <div id='page_main'>
+   <%= render :partial => "devise/shared/links" %>
+  </div>
+</div>
+

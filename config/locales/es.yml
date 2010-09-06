@@ -1,0 +1,14 @@
+es:
+  edit: "editar"
+  new: "nuevo"
+  delete: "borrar"
+
+  roles: "Roles"
+  users: "Usuarios"
+
+  new_role: "Nuevo rol"
+  role_management: "> Gestión de roles"
+
+  new_user: "Nuevo usuario"
+  user_management: "> Gestión de usuarios"
+

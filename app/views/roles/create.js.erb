@@ -1,0 +1,32 @@
+<% if @role.errors.any? %>
+  /*Hide the flash notice div*/
+  $('#page_notice').hide(300);
+
+  /*Update the html of the div post_errors with the new one*/
+  $('#page_error').html('<%= escape_javascript(render('shared/error_messages', :target => @role)) %>');
+
+  /*Show the div post_errors*/
+  $('#page_error').show(300);
+<% else %>
+  /*Hide the div post_errors*/
+  $('#page_error').hide(300);
+
+  /*Update the html of the div flash_notice with the new one*/
+  $('#page_notice').html('<%= escape_javascript(flash[:notice])%>');
+
+  /*Show the flash_notice div*/
+  $('#page_notice').show(300);
+
+  /*Clear the entire form*/
+  $(':input:not(input[type=submit])').val('');
+
+  /* Replace the count of comments */
+  $('#page_count').html("<%= Role.count %>");
+
+  /* Add the new comment to the bottom of the comments list */
+  $('#roles').append('<%= escape_javascript(render(@role)) %>');
+
+  /* Highlight the new comment */
+  $('#role_<%= @role.id %>').effect('highlight', {}, 3000);
+<% end %>
+

@@ -1,0 +1,17 @@
+<br/>
+<div id='page_notice' style='display:none'></div>
+<div id='page_error' style='display:none'></div>
+
+<%= semantic_form_for(Category.new, :remote => true) do |form| %>
+
+  <%= form.inputs do %>
+  <%= form.input :name %>
+  <% end %>
+
+  <% form.buttons do %>
+  <%= form.commit_button %>
+  <% end %>
+
+<% end %>
+<hr/>
+

@@ -1,0 +1,8 @@
+<%= div_for category do %>
+    <p>
+    <%= link_to "delete", category, :confirm => 'Are you sure?', :method => :delete, :remote => true %>
+    -
+    <%= category.name %>
+    </p>
+<% end %>
+
